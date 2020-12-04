@@ -6,7 +6,9 @@ We are going to create a BankAccount class. This class will recreate some of the
 **Objectives:**
 
 ● Practice member variables
+
 ● Practice instance methods and getter and setters
+
 ● Implement static variables and methods.
 
 **Tasks:**
