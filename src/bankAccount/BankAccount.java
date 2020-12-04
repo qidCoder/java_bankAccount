@@ -20,7 +20,7 @@ public class BankAccount {
 		this.savingAmt = 0;
 		totalAccounts++;//In the constructor, be sure to increment the account count.
 
-		System.out.printf("New account created: %s\n", this.accountNum);
+		System.out.printf("New account created: %s. Total number of Bank accounts: %d\n", this.accountNum, totalAccounts);
 	}
 	public BankAccount(String accountNum, double checkingAmt, double savingAmt) {
 		this.accountNum = accountNum;
@@ -74,6 +74,9 @@ public class BankAccount {
 			this.checkingAmt += amount;
 			System.out.printf("Depositing %.2f into checkings account %s. New total is: $%.2f\n", amount, this.accountNum, getCheckingAmt());
 		}
+		else {
+			System.out.println("Invalid account type. Please enter either saving or checking.");
+		}
 		
 		grandBankTotal += amount;
 		System.out.printf("The grand bank total is now $%.2f\n", grandBankTotal);
@@ -101,6 +104,9 @@ public class BankAccount {
 				System.out.println("Insufficient funds.");
 				return;
 			}
+		}
+		else {
+			System.out.println("Invalid account type. Please enter either saving or checking.");
 		}
 		
 		grandBankTotal -= amount;
